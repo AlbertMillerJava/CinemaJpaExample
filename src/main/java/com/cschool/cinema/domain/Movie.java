@@ -15,7 +15,7 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    private String name;
+    private String title;
     @Enumerated(EnumType.STRING)
     private EMovieCategory category;
     private int length;
