@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public interface SessionService {
 
-    Long createSession(Movie movie, Room room, LocalDateTime startTime);
+    Long createSession(Long movieId, Long roomId, LocalDateTime startTime);
 
     Optional<Session> getSessionById(Long id);
 
