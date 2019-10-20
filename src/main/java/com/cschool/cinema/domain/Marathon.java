@@ -17,7 +17,7 @@ public class Marathon {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String name;
-//    @Column(name = "start_time")
+    @Column(name = "start_time")
     private LocalDateTime startTime;
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     @JoinTable(

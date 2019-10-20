@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NamedEntityGraph(name = "Session.tickets", attributeNodes = @NamedAttributeNode("tickets"))
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -16,20 +17,19 @@ public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-//    @Column(name = "movie_id")
-    private Long movieId;
-//    @Column(= "room_id")
-    private Long roomId;
-//    @Column(name = "start_time")
+
+    @Column(name = "start_time")
     private LocalDateTime startTime;
     @ManyToOne
-    @JoinColumn(name = "room")
+    @JoinColumn(name = "room_id")
     private Room room;
     @ManyToOne
-    @JoinColumn (name = "movie")
+    @JoinColumn (name = "movie_id")
+    @ToString.Exclude
     private Movie movie;
     @OneToMany(mappedBy = "session",cascade = CascadeType.ALL, orphanRemoval = true)
     @Getter(AccessLevel.NONE)
+    @ToString.Exclude
     private List<Ticket> tickets;
 
     public List<Ticket> getTickets(){

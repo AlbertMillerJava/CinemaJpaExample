@@ -15,11 +15,9 @@ public class Poster {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-//    @Column(name = "movie_id")
-    private Long movieId;
-//    @Column(name = "file_path")
+    @Column(name = "file_path")
     private String filePath;
     @OneToOne
-    @JoinColumn(name = "movie", referencedColumnName = "id")
+    @JoinColumn(name = "movie_id", referencedColumnName = "id")
     private Movie movie;
 }

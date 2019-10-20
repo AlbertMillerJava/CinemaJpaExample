@@ -16,11 +16,9 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-//    @Column(name= "session_id")
-    private Long sessionId;
     private String seat;
     private BigDecimal price;
     @ManyToOne
-    @JoinColumn(name = "session")
+    @JoinColumn(name = "session_id")
     private Session session;
 }

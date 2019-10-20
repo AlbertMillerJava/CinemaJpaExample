@@ -1,7 +1,6 @@
 package com.cschool.cinema.service;
 
 import com.cschool.cinema.domain.Marathon;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.time.LocalDateTime;

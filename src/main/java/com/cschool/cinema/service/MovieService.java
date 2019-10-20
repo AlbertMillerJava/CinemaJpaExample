@@ -2,7 +2,6 @@ package com.cschool.cinema.service;
 
 import com.cschool.cinema.domain.EMovieCategory;
 import com.cschool.cinema.domain.Movie;
-import com.cschool.cinema.repository.MovieRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

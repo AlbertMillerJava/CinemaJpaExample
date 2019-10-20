@@ -2,13 +2,11 @@ package com.cschool.cinema.service;
 
 import com.cschool.cinema.domain.Marathon;
 import com.cschool.cinema.domain.Movie;
-import com.cschool.cinema.domain.Session;
 import com.cschool.cinema.exception.EntityDoesNotExistsException;
 import com.cschool.cinema.iterable.IterableUtils;
 import com.cschool.cinema.repository.MarathonRepository;
 import com.cschool.cinema.repository.MovieRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

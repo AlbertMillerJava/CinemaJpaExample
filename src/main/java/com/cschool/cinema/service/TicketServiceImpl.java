@@ -21,7 +21,9 @@ public class TicketServiceImpl implements TicketService {
 
     private SessionRepository sessionRepository;
     private TicketRepository ticketRepository;
+
     @Override
+    @Transactional
     public Long createTicket(Long sessionId, String seat, BigDecimal price) {
         Optional<Session> optionalSession = sessionRepository.findById(sessionId);
         if (optionalSession.isEmpty()){

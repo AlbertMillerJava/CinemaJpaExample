@@ -53,6 +53,7 @@ public class SessionServiceImpl implements SessionService {
     }
 
     @Override
+    @Transactional
     public Optional<Session> getSessionWithTickets(Long id) {
         return sessionRepository.readById(id);
     }
@@ -63,6 +64,7 @@ public class SessionServiceImpl implements SessionService {
     }
 
     @Override
+    @Transactional
     public void removeSession(Long id) {
         sessionRepository.deleteById(id);
     }

@@ -1,7 +1,5 @@
 package com.cschool.cinema.service;
 
-import com.cschool.cinema.domain.Movie;
-import com.cschool.cinema.domain.Room;
 import com.cschool.cinema.domain.Session;
 
 import java.time.LocalDate;
