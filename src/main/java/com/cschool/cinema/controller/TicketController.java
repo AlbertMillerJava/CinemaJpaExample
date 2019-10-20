@@ -1,5 +1,6 @@
 package com.cschool.cinema.controller;
 
+import com.cschool.cinema.boundary.dto.TicketDto;
 import com.cschool.cinema.domain.Ticket;
 import com.cschool.cinema.service.TicketService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +17,8 @@ public class TicketController {
 
     @PostMapping(path = "/add")
     @ResponseStatus(HttpStatus.CREATED)
-    public Long createTicket(@RequestBody Ticket ticket){
+    public Long createTicket(@RequestBody TicketDto ticketDto){
+        Ticket ticket = ticketDto.createTicketFromDto();
         return ticketService.createTicket(ticket.getSession().getId(),ticket.getSeat(),ticket.getPrice());
     }
 

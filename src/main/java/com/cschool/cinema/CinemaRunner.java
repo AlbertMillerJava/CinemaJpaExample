@@ -105,6 +105,4 @@ public class CinemaRunner implements CommandLineRunner {
         marathons.forEach(marathon -> log.info("    {}", marathon));
         marathonService.deleteMarathon(newMarathonId);
     }
-
-
 }
