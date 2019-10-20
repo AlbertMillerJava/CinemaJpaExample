@@ -16,17 +16,17 @@ public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    @Column(columnDefinition = "movie_id")
+//    @Column(name = "movie_id")
     private Long movieId;
-    @Column(columnDefinition = "room_id")
+//    @Column(= "room_id")
     private Long roomId;
-    @Column(columnDefinition = "start_time")
+//    @Column(name = "start_time")
     private LocalDateTime startTime;
     @ManyToOne
-    @JoinColumn(name = "room_id")
+    @JoinColumn(name = "room")
     private Room room;
     @ManyToOne
-    @JoinColumn (name = "movie_id")
+    @JoinColumn (name = "movie")
     private Movie movie;
     @OneToMany(mappedBy = "session",cascade = CascadeType.ALL, orphanRemoval = true)
     @Getter(AccessLevel.NONE)

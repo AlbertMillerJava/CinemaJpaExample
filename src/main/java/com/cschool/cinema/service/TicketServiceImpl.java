@@ -32,7 +32,7 @@ public class TicketServiceImpl implements TicketService {
         ticket.setSeat(seat);
         ticket.setPrice(price);
         ticketRepository.save(ticket);
-
+        optionalSession.get().addTicket(ticket);
         return ticket.getId();
     }
 

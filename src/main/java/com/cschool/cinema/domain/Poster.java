@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.logging.Logger;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,11 +15,11 @@ public class Poster {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    @Column(columnDefinition = "movie_id")
+//    @Column(name = "movie_id")
     private Long movieId;
-    @Column(columnDefinition = "file_path")
+//    @Column(name = "file_path")
     private String filePath;
     @OneToOne
-    @JoinColumn(name = "movie_id", referencedColumnName = "id")
+    @JoinColumn(name = "movie", referencedColumnName = "id")
     private Movie movie;
 }

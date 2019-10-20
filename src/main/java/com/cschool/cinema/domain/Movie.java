@@ -20,9 +20,10 @@ public class Movie {
     private EMovieCategory category;
     private int length;
     private String description;
-    @Column(columnDefinition = "required_age")
+//    @Column(name = "required_age")
     private int requiredAge;
     @ManyToMany(mappedBy = "movies", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ToString.Exclude
     @Getter(AccessLevel.NONE)
     private List<Marathon> marathons;
 
